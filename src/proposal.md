@@ -56,3 +56,5 @@ press 'r' you get a rainfall animation
   1. Create the game function.
   2. Tidy up the code and project folders. Make sure I have all of my
   deliverables
+  3. If i can figure out how to save the animation with a key press and save
+  the animation with a transparent background
