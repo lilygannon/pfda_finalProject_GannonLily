@@ -27,9 +27,11 @@ so i will use the images instead of a pygame surface or shape
   animation
 
 ## Challenges
-- Short sentence of any skill or topic that needs to be learnt or researched.
-- Short sentence of any skill or topic that needs to be learnt or researched.
-- Short sentence of any skill or topic that needs to be learnt or researched.
+- How to call an image in pygame and call multiples.
+- How to get an image to move in pygame, when we did the rain the particles
+weren't moving but appearing in a line, so i need to research how to move them.
+- How to vary opacity and size when calling images instead of having them all
+be the same size and opacity.
 
 ## Outcomes
 Ideal Outcome:
