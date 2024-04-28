@@ -23,32 +23,37 @@ class Rain(pygame.sprite.Sprite):
         self.rect.y = self.rect.y + self.speedy            
 
 
-def main():
-    pygame.init()
-    clock = pygame.time.Clock()
-    WHITE = (255, 255, 255)
-    rain_img = pygame.image.load('src/Raindrop.png')
-    wn_width = 700
-    wn_height = 500
-    wn = pygame.display.set_mode((wn_width, wn_height))
-    pygame.display.set_caption('Torrential Rain')
-    rain_group = pygame.sprite.Group()
-    for i in range(100):
-        rain = Rain()
-        rain_group.add(rain)
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                quit()
-        rain_group.update()
-        wn.fill(WHITE)
-        rain_group.draw(wn)
-        pygame.display.flip()
-        clock.tick(30)
-        pygame.quit()
-        quit()
+pygame.init()
 
+clock = pygame.time.Clock()
 
-if __name__ == "__main__":
-    main()
+WHITE = (255, 255, 255)
+
+rain_img = pygame.image.load('src/Raindrop.png')
+
+wn_width = 700
+wn_height = 500
+wn = pygame.display.set_mode((wn_width, wn_height))
+pygame.display.set_caption('Torrential Rain')
+
+rain_group = pygame.sprite.Group()
+
+for i in range(100):
+    rain = Rain()
+    rain_group.add(rain)
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            quit()
+
+    rain_group.update()
+
+    wn.fill(WHITE)
+    rain_group.draw(wn)
+    pygame.display.flip()
+    clock.tick(30)
+
+pygame.quit()
+quit()
