@@ -20,7 +20,7 @@ class Rain(pygame.sprite.Sprite):
             self.rect.y = random.randint(-wn_height, -5)
 
         self.rect.x = self.rect.x + self.speedx
-        self.rect.y = self.rect.y + self.speedy            
+        self.rect.y = self.rect.y + self.speedy
 
 
 pygame.init()
