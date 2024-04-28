@@ -4,7 +4,6 @@ from sys import exit
 
 
 class Snowflake:
-
 	def __init__(self, position, radius, gravity):
 		self.pos = position
 		self.radius = radius
@@ -13,7 +12,7 @@ class Snowflake:
 		self.radius_change = True
 		self.color = (255, 255, 255)
 
-    def controller(self, height, width):
+	def controller(self, height, width):
 		self.update_pos(height, width)
 		self.update_rad()
 		self.update_color(height)
@@ -37,7 +36,7 @@ class Snowflake:
 
 	def respawn(self, width):
 	 	self.pos = (randint(0, width), -1 * self.radius)
-		 
+
 
 def main():
 	pygame.init()

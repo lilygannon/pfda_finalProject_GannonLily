@@ -27,7 +27,7 @@ pygame.init()
 
 clock = pygame.time.Clock()
 
-WHITE = (255, 255, 255)
+bg_color = (52, 69, 76)
 
 rain_img = pygame.image.load('src/Raindrop.png')
 
@@ -50,7 +50,7 @@ while True:
 
     rain_group.update()
 
-    wn.fill(WHITE)
+    wn.fill(bg_color)
     rain_group.draw(wn)
     pygame.display.flip()
     clock.tick(30)
