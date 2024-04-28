@@ -41,12 +41,13 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-                rain_group.update()
+        rain_group.update()
         wn.fill(WHITE)
         rain_group.draw(wn)
         pygame.display.flip()
         clock.tick(30)
         pygame.quit()
+        quit()
 
 
 if __name__ == "__main__":
