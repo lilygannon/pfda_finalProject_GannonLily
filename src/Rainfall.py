@@ -55,7 +55,7 @@ class Rain(pygame.sprite.Sprite):
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-    
+
 # Update
         rain_group.update()
 
