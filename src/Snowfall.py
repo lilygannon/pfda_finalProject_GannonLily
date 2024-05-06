@@ -17,7 +17,8 @@ class Snowflake:
 
     def update_pos(self, height, width):
         if self.pos[1] < height + self.radius:
-            self.pos = (self.pos[0] + randint(-1, 1), self.pos[1] + self.gravity)
+            self.pos = (self.pos[0] + randint(-1, 1), self.pos[1] + 
+                        self.gravity)
         else:
             self.respawn(width)
 
