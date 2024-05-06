@@ -5,7 +5,7 @@
 Demo Video: <https://youtu.be/N0gQgx_bg7E>
 
 ## GitHub Repository
-<https://github.com/lilygannon/pfda_finalProject_GannonLily.git>
+GitHub Repo: <https://github.com/lilygannon/pfda_finalProject_GannonLily.git>
 
 ## Description
 I created a game of sorts that allows the player to choose between playing
