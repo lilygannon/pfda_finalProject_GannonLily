@@ -31,7 +31,8 @@ def main():
     text_surface, rect = game_font.render("Welcome to Rain or Snow!", 
                                           (255, 255, 255))
     screen.blit(text_surface, (WIDTH/2.5, HEIGHT/2.5))
-    text_surface, rect = game_font.render("For rainfall press 'r' and for snow press 's'.", (255, 255, 255))
+    text_surface, rect = game_font.render("For rainfall press 'r' and for snow"
+                                          " press 's'.", (255, 255, 255))
     screen.blit(text_surface, (WIDTH/3, HEIGHT/2))
     text_surface, rect = game_font.render("To escape press 'esc'.", 
                                           (255, 255, 255))
