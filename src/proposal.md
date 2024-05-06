@@ -21,7 +21,7 @@ so i will use the images instead of a pygame surface or shape.
   and levels of opacity. They will fall quicker than the snow and in one 
   direction down.
 - Game Feature
-	- The screen will open with text reading 'Wellcome to Rain or Snow: for Rain
+	- The screen will open with text reading 'Welcome to Rain or Snow: for Rain
   press r and for Snow press s'. Pressing the 'r' will call and play the
   rainfall animation and pressing the 's' will call and play the snowfall
   animation.
