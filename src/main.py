@@ -7,6 +7,7 @@ from sys import exit
 WIDTH = 1080
 HEIGHT = 580
 
+
 def main():
     pygame.init()
 
@@ -16,12 +17,16 @@ def main():
 
     rain_img = pygame.image.load('Raindrop.png')
 
-    wn = pygame.display.set_mode((WIDTH, HEIGHT))
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption('Rain or Snow')
 
     rain_group = pygame.sprite.Group()
 
-    screen = pygame.display.set_mode((WIDTH, HEIGHT))
+	# Creating the image surfaces.
+	trees_back = pygame.image.load('trees_back.png').convert_alpha()
+	trees_front = pygame.image.load('trees_front.png').convert_alpha()
+
+
     GAME_FONT = pygame.freetype.Font("Harmond-SemBdItaCond.otf", 24)
     running = True
 
@@ -52,8 +57,24 @@ def main():
                         rain_group.draw(wn)
                         pygame.display.flip()
                         clock.tick(50)
-                '''elif event.key == pygame.K_s:
-                        '''
+                elif event.key == pygame.K_s:
+                    snowflakes = []
+                    for i in range(0, 500):
+                        position = (randint(0, WIDTH), randint(0, HEIGHT))
+                        gravity = randint(1, 2)
+                        radius = randint(2, 4)
+                        snowflakes.append(Snowflake(position, radius, gravity))
+                        
+                    screen.blit(trees_back, (0, 0))	
+		
+                    for snowflake in snowflakes:
+                        pygame.draw.circle(screen, snowflake.color, snowflake.pos, snowflake.radius)
+                        snowflake.controller(HEIGHT, WIDTH)
+
+                    screen.blit(trees_front, (0, 0))	
+
+                    pygame.display.update()
+                    clock.tick(30)
             elif event.type == pygame.QUIT:
                 running = False
                     
