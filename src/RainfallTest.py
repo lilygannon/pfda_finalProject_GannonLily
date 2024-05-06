@@ -27,37 +27,44 @@ class Rain(pygame.sprite.Sprite):
         self.rect.y = self.rect.y + self.speedy
 
 
-def main():
+"""def main():
     pygame.init()
 
+# Used to manage how fast the screen updates
     clock = pygame.time.Clock()
 
-    bg_color = (52, 69, 76)
+# Define some colors
+    WHITE = (255, 255, 255)
 
-    rain_img = pygame.image.load('src/Raindrop.png')
+# images
+    rain_img = pygame.image.load('Raindrop.png')
 
     wn = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption('Torrential Rain')
 
+# sprite block
     rain_group = pygame.sprite.Group()
 
     for i in range(100):
         rain = Rain(rain_img)
         rain_group.add(rain)
 
+# -------- Main Program Loop -----------
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-
+    
+# Update
         rain_group.update()
 
-        wn.fill(bg_color)
+# Draw all the spites
+        wn.fill(WHITE)
         rain_group.draw(wn)
         pygame.display.flip()
         clock.tick(30)
 
 
 if __name__ == "__main__":
-    main()
+    main()"""
