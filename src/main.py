@@ -1,6 +1,7 @@
 import pygame
 import pygame.freetype
 from RainfallTest import Rain
+from class_Snowflake import Snowflake
 from random import randint
 from sys import exit
 
@@ -53,8 +54,8 @@ def main():
                         rain_group.add(rain)
                         rain_group.update()
 
-                        wn.fill(bg_color)
-                        rain_group.draw(wn)
+                        screen.fill(bg_color)
+                        rain_group.draw(screen)
                         pygame.display.flip()
                         clock.tick(50)
                 elif event.key == pygame.K_s:
